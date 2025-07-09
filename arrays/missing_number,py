@@ -1,0 +1,12 @@
+#https://leetcode.com/problems/missing-number/description/?envType=problem-list-v2&envId=array
+
+from typing import List
+def missingNumber(nums: List[int]) -> int:
+        length = len(nums)
+        total = sum(range(length+1))
+        
+        #difference between these two values will be the missing number
+        return total - sum(nums)
+
+nums = [6, 3, 7, 5, 2, 0, 1]
+print(missingNumber(nums))
